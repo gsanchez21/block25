@@ -19,11 +19,11 @@ const [count, setCount] = useState(0);
     </>
   );
 }
-function Button({count, setCount}) {
-  //console.log("Props: ",props);
+function Button(props) {
+  console.log("Props: ",props);
   return (
-  <button onClick={() => {setCount(count)
-  }}>{count}</button>
+  <button onClick={() => {props.setCount(props.count +1);
+  }}>{props.count}</button>
   );
 
 }
